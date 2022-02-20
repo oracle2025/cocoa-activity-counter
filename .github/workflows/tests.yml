@@ -3,7 +3,7 @@ name: tests
 on: [push]
 
 jobs:
-  run_tests:
+  build:
     runs-on: macos-11
     steps:
     - uses: actions/checkout@v1
