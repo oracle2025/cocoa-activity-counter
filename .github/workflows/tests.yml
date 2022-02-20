@@ -13,7 +13,9 @@ jobs:
       run: xcodebuild -configuration Debug build -project CocoaActivityCounter.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}
     - name: Find app
       run: find . -name CocoaActivityCounter.app
+    - name: zip app
+      run: cd build/Debug && mkdir download && mv CocoaActivityCounter.app downlad/ && zip -r -X "download.zip" download/*
     - uses: actions/upload-artifact@v2
       with:
         name: app
-        path: build/Debug/CocoaActivityCounter.app
+        path: build/Debug/download.zip
