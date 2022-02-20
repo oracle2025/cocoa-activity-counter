@@ -13,9 +13,3 @@ jobs:
       run: xcodebuild -configuration Debug build -project CocoaActivityCounter.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}
     - name: Find app
       run: find . -name CocoaActivityCounter.app
-    - name: Archive app
-      uses: actions/upload-artifact@v2
-      with:
-	name: app
-	path: CocoaActivityCounter.app
-
