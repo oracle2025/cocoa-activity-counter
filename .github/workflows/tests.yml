@@ -14,7 +14,7 @@ jobs:
     - name: Find app
       run: find . -name CocoaActivityCounter.app
     - name: zip app
-      run: cd build/Debug && mkdir download && mv CocoaActivityCounter.app downlad/ && cd download && zip -r "../download.zip" . -i .
+      run: cd build/Debug && mkdir download && mv CocoaActivityCounter.app downlad/ && cd download && zip --version && zip -r "../download.zip" . -i .
     - uses: actions/upload-artifact@v2
       with:
         name: app
