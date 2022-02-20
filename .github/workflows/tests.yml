@@ -15,5 +15,5 @@ jobs:
       run: find . -name CocoaActivityCounter.app
     - uses: actions/upload-artifact@v2
       with:
-        name: my-artifact
+        name: app
         path: build/Debug/CocoaActivityCounter.app
